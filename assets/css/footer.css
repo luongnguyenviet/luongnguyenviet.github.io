@@ -1,0 +1,27 @@
+#footer{
+margin: 54px 0;
+}
+.footer-list{
+display: flex;
+justify-content: center;
+}
+.footer-item{
+font-size: 20px;
+padding-right: 4px;
+opacity: 0.5;
+}
+.footer-item:hover{
+    opacity: 0.3;
+}
+.footer-msg{
+display: flex;
+justify-content: center;
+margin-top: 30px;
+}
+.footer-msg__item{
+opacity: 0.8;
+}
+.footer-msg__link{
+opacity: 0.8;
+margin-left: 4px;
+}

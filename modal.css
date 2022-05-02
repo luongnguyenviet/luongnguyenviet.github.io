@@ -1,0 +1,90 @@
+.modal{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+.modal.open{
+    display: flex;
+}
+.modal-container{
+    background-color: #fff;
+    position: relative;
+   width: 900px;
+   max-width: calc(100%-32px);
+   min-height: 200px;
+/* Tao ra chuyen dong*/
+  animation: modalFaceIn ease 0.5s;
+}
+.modal-header{
+    height: 129px;
+    background-color: #009688;
+    text-align: center;
+    line-height: 129px;
+    justify-items: center;
+    color: #fff;
+    font-size: 30px;
+
+}
+.modal-close{
+    position: absolute;
+    right: 0;
+    padding: 16px 12px;
+    color: #fff;
+}
+.modal-close:hover{
+    /* background-color: #ccc; */
+    color: #000;
+    cursor: pointer;
+}
+.modal-body{
+    margin: 16px;
+}
+.modal-label{
+    display: block;
+    
+}
+.modal-label__text{
+    width: 100%;
+    padding: 8px 0 8px 8px;
+    margin: 16px 0;
+}
+.buy-tickets{
+    width: 100%;
+    margin-bottom: 16px;
+    padding: 12px 0;
+    color: #fff;
+    background-color: #009688;
+    font-weight: 700;
+    font-size: 16px;
+}
+.buy-tickets:hover{
+    background-color: #ccc;
+    color: #000;
+}
+.buy-tickets__link{
+margin: 16px 0 32px 0;
+display: flex;
+justify-content: end;
+}
+.buy-tickets__link-item{
+color: #009688;
+margin-left: 8px;
+}
+/* Tao ra chuyen dong*/
+@keyframes modalFaceIn{
+    from{
+          transform: translateY(-120px);
+          opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

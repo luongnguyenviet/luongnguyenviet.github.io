@@ -1,0 +1,131 @@
+
+html{
+  height: 500px;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+body{
+    display: flex;
+    height: 100vh;
+}
+body > div{
+    margin: auto;
+}
+.btn{
+    display: inline-block;
+    text-decoration: none;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    padding: 12px 48px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+    min-width: 120px;
+}
+.btn:hover{
+    opacity: 0.8;
+
+}
+.btn + .btn{
+    margin-left: 16px;
+}
+.btn--success{
+    background-color: green;
+}
+.btn--warn{
+background-color:  #ffb720;
+}
+.btn--danger{
+background-color: #f71e34;
+}
+.btn--info{
+    background-color: blue;
+}
+.btn--disabled{
+    opacity: 0.5 !important;
+    cursor: default;
+}
+.toast{
+    display: flex;
+    background-color: #fff;
+    border-left: 4px solid;
+    box-shadow: 1px 5px 8px #ccc;
+    align-items: center;
+    border-radius: 5px;
+    padding:20px;
+    min-width: 400px;
+    max-width: 450px;
+    transition: all linear .3s;
+    z-index: 10000000;
+}
+@keyframes slideInleft{
+    from{
+        opacity: 0;
+        transform: translateX(calc(100% + 32px));
+    }
+    to{
+        opacity: 1;
+      transform: translateX(0);
+    }
+}
+@keyframes fadeOut{
+    to{
+        opacity: 0;
+    }
+}
+.toast + .toast{
+    margin-top: 24px;
+}
+.toast__icon{
+padding: 0 16px;
+font-size: 24px;
+}
+.toast__body{
+flex: 1;
+}
+.toast__tilte{
+font-size: 16px;
+font-weight: 600;
+}
+.toast__msg{
+font-size: 14px;
+opacity: 0.8;
+}
+.toast__close{
+    padding: 0 16px;
+    font-size: 20px;
+}
+.toast__close:hover{
+cursor: pointer;
+opacity: 0.5;
+}
+.toast--success{
+border-color:  green;
+}
+.toast--info{
+border-color: blue;
+}
+.toast--warning{
+border-color: #ffc021;
+}
+.toast--error{
+border-color: red;
+}
+.toast--success .toast__icon{
+color: green;
+}
+.toast--info .toast__icon{
+color: blue;
+}
+.toast--warning .toast__icon{
+    color: #ffc021;   
+}
+.toast--error .toast__icon{
+color: red;
+}
+#toast{
+    position: fixed;
+    top: 32px;
+    right: 32px;
+}
